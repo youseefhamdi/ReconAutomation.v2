@@ -31,9 +31,9 @@ chmod +x *.sh
 
 ### 2. Single Domain Reconnaissance
 ```bash
-./advanced_recon_multi.sh example.com
+./wolf_recon_advanced.sh example.com
 # or
-./simple_recon_multi.sh example.com
+./wolf_recon_simple.sh example.com
 ```
 
 ### 3. Multi-Target Reconnaissance
@@ -44,7 +44,7 @@ echo "test.com" >> targets.txt
 echo "demo.org" >> targets.txt
 
 # Run reconnaissance
-./advanced_recon_multi.sh targets.txt
+./wolf_recon_advanced.sh targets.txt
 ```
 
 ### 4. Review Results
