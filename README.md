@@ -72,61 +72,13 @@ cat recon_*/summary.txt
 The suite implements your exact tool specifications:
 
 ### Subfinder
-```bash
-subfinder -dL targets.txt -t 50 -o subfinder.txt -all
-```
-**Features**: Fast passive enumeration with 55+ data sources
-
 ### AssetFinder
-```bash
-cat targets.txt | while read domain; do
-    assetfinder --subs-only "$domain"
-done > assetfinder.txt
-```
-**Features**: Quick API-based subdomain discovery
-
 ### Amass
-```bash
-amass enum -passive -df targets.txt -o amass_results.txt
-```
-**Features**: Advanced OSINT framework with intelligence gathering
-
 ### BBOT
-```bash
-bbot -l targets.txt -p subdomain-enum cloud-enum code-enum email-enum spider web-basic paramminer dirbust-light web-screenshots --allow-deadly
-```
-**Features**: Comprehensive recursive web application scanner
-
 ### FFUF
-```bash
-# Per-domain fuzzing implementation
-while read domain; do
-    ffuf -w wordlist.txt -u "https://FUZZ.$domain" -mc 200,301,302,403
-done < targets.txt
-```
-**Features**: High-performance web fuzzer
-
-### Subdog
-```bash
-cat targets.txt | subdog -tools all
-```
-**Features**: Multi-tool integration wrapper
-
+### Subdog``
 ### Sudomy (Special Implementation)
-```bash
-# Custom loop since Sudomy doesn't support target lists
-while read -r domain; do
-    sudomy -d "$domain" --all -o "output_${domain}/"
-done < targets.txt
-```
-**Features**: Comprehensive subdomain enumeration with custom multi-target handling
-
 ### DNScan
-```bash
-dnscan -l targets.txt -w wordlist.txt -r --maxdepth 3 -o dnscan.txt
-```
-**Features**: Recursive DNS brute-force with depth control
-
 ---
 
 ## 📂 Output Structure
